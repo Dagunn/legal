@@ -1,0 +1,328 @@
+@font-face {
+  font-family: "proximanova-bold";
+  src: url("../fonts/proximanova-bold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  display: swap;
+}
+@font-face {
+  font-family: "proximanova-regular";
+  src: url("../fonts/proximanova-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  display: swap;
+}
+.container {
+  max-width: 800px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+body {
+  background-color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "proximanova-regular", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000;
+}
+
+.card-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  background-color: #fff;
+  padding: 24px;
+  border-radius: 8px;
+  width: 100%;
+}
+@media (width <= 744px) {
+  .card {
+    padding: 16px;
+  }
+}
+.card__header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 20px;
+}
+.card__header-person {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 16px;
+}
+@media (width <= 744px) {
+  .card__header-person-name {
+    color: rgba(0, 0, 0, 0.8);
+  }
+}
+.card__header-person-stat {
+  color: rgba(0, 0, 0, 0.4);
+  font-weight: 400;
+}
+.card__header-person-data {
+  color: rgba(0, 0, 0, 0.2);
+  font-weight: 400;
+  margin-top: 2px;
+}
+.card__header-person-data span:nth-child(1) {
+  color: #62b435;
+}
+.card__header-person-data span:nth-child(3) {
+  color: #f64747;
+}
+.card__header-person-data span:nth-child(4) {
+  color: rgba(0, 0, 0, 0.8);
+}
+.card__header-table {
+  display: flex;
+  align-items: center;
+  width: 368px;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 16px;
+}
+@media (width <= 744px) {
+  .card__header-table {
+    justify-content: flex-end;
+    width: 85px;
+  }
+}
+.card__header-table-item {
+  display: flex;
+  flex-direction: column;
+  width: 64px;
+  gap: 2px;
+}
+.card__header-table-item-mob {
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 14px;
+  flex-direction: column;
+}
+.card__header-table-item-mob span:nth-child(2) {
+  color: #62b435;
+  font-weight: 600;
+}
+@media (width <= 744px) {
+  .card__header-table-item {
+    display: none;
+  }
+}
+.card__header-table-item--1 {
+  color: #62b435;
+}
+.card__header-table-item--2 {
+  color: rgba(0, 0, 0, 0.4);
+}
+.card__header-table-item--3 {
+  color: #f64747;
+}
+.card__header-table-item--4, .card__header-table-item--5 {
+  color: #62b435;
+}
+.card__header-table-item--4 span:first-child, .card__header-table-item--5 span:first-child {
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.8);
+}
+.card__header-table-item span {
+  display: inline-block;
+}
+.card__header-table-item span:first-child {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.card__body-arrow {
+  position: relative;
+  bottom: -23px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.card__body-text {
+  color: rgba(0, 0, 0, 0.6);
+}
+.card__bottom {
+  background: rgba(240, 241, 242, 0.4);
+  padding: 24px 22px;
+  margin: 0 -24px;
+  position: relative;
+}
+@media (width <= 744px) {
+  .card__bottom {
+    padding: 16px;
+    margin: 0 -16px;
+  }
+}
+.card__bottom-inner {
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+}
+@media (width <= 744px) {
+  .card__bottom-inner {
+    margin-bottom: 12px;
+  }
+}
+.card__bottom::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 90px;
+  background-color: #3498db;
+}
+.card__bottom-forecast {
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 12px;
+  font-family: "proximanova-bold", sans-serif;
+  text-transform: uppercase;
+  line-height: 14px;
+}
+.card__bottom-text {
+  font-size: 18px;
+  font-family: "proximanova-bold", sans-serif;
+  line-height: 20px;
+  color: #000;
+}
+@media (width <= 744px) {
+  .card__bottom-text {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+.card__bottom-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.card__bottom-right-coefficient {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.card__bottom-right-coefficient p {
+  color: #333333;
+  font-size: 12px;
+  line-height: 14px;
+}
+.card__bottom-right-coefficient p + p {
+  font-family: "Futura PT", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+}
+@media (width <= 744px) {
+  .card__bottom-right-coefficient p + p {
+    font-size: 18px;
+  }
+}
+.card__bottom-right-coefficient-text {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+@media (width <= 744px) {
+  .card__bottom-right-coefficient-mob {
+    width: 95px;
+  }
+}
+.card__bottom-button {
+  background-color: #3498db;
+  font-family: "Wix Madefor Text", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 16px;
+  border: none;
+  padding: 12px 17px;
+  height: 40px;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+}
+@media (width <= 744px) {
+  .card__bottom-button {
+    width: 100%;
+  }
+}
+
+.card__body {
+  position: relative;
+  overflow: hidden;
+  transition: height 0.5s ease;
+  height: 8em;
+}
+.card__body--expanded {
+  height: auto;
+  margin-bottom: 20px;
+}
+.card__body--expanded .card__body-fade {
+  display: none;
+}
+.card__body-text {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 24px;
+}
+.card__body-arrow {
+  position: absolute;
+  top: -17px;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  cursor: pointer;
+  z-index: 1;
+}
+.card__body-fade {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3em;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 16.67%, #ffffff 100%);
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+  opacity: 1;
+}
+.card__body-fade--expanded {
+  opacity: 0;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+.show-mob {
+  display: none;
+}
+@media (width <= 744px) {
+  .show-mob {
+    display: block;
+  }
+}
+
+.mob-flex {
+  display: none;
+}
+@media (width <= 744px) {
+  .mob-flex {
+    display: flex;
+  }
+}
+
+@media (width <= 744px) {
+  .hide-mob {
+    display: none;
+  }
+}/*# sourceMappingURL=styles.css.map */
